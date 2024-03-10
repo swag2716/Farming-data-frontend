@@ -80,7 +80,8 @@ const GetAllSchedulesComponent: React.FC = () => {
           <h2>Schedules for {farms.find((farm) => farm.farm_id === selectedFarm)?.village}</h2>
           <ul>
             {schedules.map((schedule) => (
-              <li key={schedule.id}>{/* Render schedule information here */}</li>
+              <li key={schedule.id}>{
+                schedule.days_after_sowing} {schedule.fertilizer} {schedule.quantity} {schedule.quantity_unit}</li>
             ))}
           </ul>
         </div>
